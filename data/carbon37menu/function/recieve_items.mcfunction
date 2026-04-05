@@ -1,0 +1,2 @@
+clear
+item replace entity @s hotbar.0 with minecraft:warped_fungus_on_a_stick[ minecraft:custom_name={text:"Fight", italic:false},minecraft:unbreakable={}, minecraft:item_model="iron_sword",  custom_data={item:"fight"}]
