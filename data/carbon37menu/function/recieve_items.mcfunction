@@ -1,4 +1,5 @@
 clear
+execute as @s at @s run playsound minecraft:block.note_block.bit ambient @s
 tag @s add at_spawn
 item replace entity @s hotbar.0 with minecraft:warped_fungus_on_a_stick[ minecraft:custom_name={text:"FFA ", italic:false},minecraft:unbreakable={}, minecraft:item_model="iron_sword",  custom_data={item:"fight"}]
 item replace entity @s hotbar.1 with minecraft:warped_fungus_on_a_stick[ minecraft:custom_name={text:"Right Click Somebody to Duel", italic:false},minecraft:unbreakable={}, minecraft:item_model="golden_sword",  custom_data={item:"duel"}]
