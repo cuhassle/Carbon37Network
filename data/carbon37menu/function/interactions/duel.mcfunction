@@ -1,0 +1,1 @@
+execute as @a at @s if predicate carbon37menu:can_duel run say duel!!!
