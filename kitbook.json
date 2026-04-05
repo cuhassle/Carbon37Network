@@ -17,56 +17,56 @@ item replace entity @s hotbar.0 with minecraft:written_book[written_book_content
                     "text":"Sword",
                     "color":"blue",
                     "hover_event":{"action":"show_text","value":"Select Sword"},
-                    "click_event":{"action":"run_command","command":"/trigger carbon37menu.sword set 1"}
+                    "click_event":{"action":"run_command","command":"/trigger carbon37menu.sword"}
                 },
                 "\n",
                 {
                     "text":"Axe",
                     "color":"blue",
                     "hover_event":{"action":"show_text","value":"Select Axe"},
-                    "click_event":{"action":"run_command","command":"/trigger carbon37menu.axe set 1"}
+                    "click_event":{"action":"run_command","command":"/trigger carbon37menu.axe"}
                 },
                 "\n",
                 {
                     "text":"Pot",
                     "color":"blue",
                     "hover_event":{"action":"show_text","value":"Select Pot"},
-                    "click_event":{"action":"run_command","command":"/trigger carbon37menu.pot set 1"}
+                    "click_event":{"action":"run_command","command":"/trigger carbon37menu.pot"}
                 },
                 "\n",
                 {
                     "text":"NethPot",
                     "color":"blue",
                     "hover_event":{"action":"show_text","value":"Select NethPot"},
-                    "click_event":{"action":"run_command","command":"/trigger carbon37menu.neth_pot set 1"}
+                    "click_event":{"action":"run_command","command":"/trigger carbon37menu.neth_pot"}
                 },
                 "\n",
                 {
                     "text":"UHC",
                     "color":"blue",
                     "hover_event":{"action":"show_text","value":"Select UHC"},
-                    "click_event":{"action":"run_command","command":"/trigger carbon37menu.uhc set 1"}
+                    "click_event":{"action":"run_command","command":"/trigger carbon37menu.uhc"}
                 },
                 "\n",
                 {
                     "text":"SMP",
                     "color":"blue",
                     "hover_event":{"action":"show_text","value":"Select SMP"},
-                    "click_event":{"action":"run_command","command":"/trigger carbon37menu.smp set 1"}
+                    "click_event":{"action":"run_command","command":"/trigger carbon37menu.smp"}
                 },
                 "\n",
                 {
                     "text":"Crystal",
                     "color":"blue",
                     "hover_event":{"action":"show_text","value":"Select Crystal"},
-                    "click_event":{"action":"run_command","command":"/trigger carbon37menu.crystal set 1"}
+                    "click_event":{"action":"run_command","command":"/trigger carbon37menu.crystal"}
                 },
                 "\n",
                 {
                     "text":"Mace",
                     "color":"blue",
-                    "hover_event":{"action":"show_text","value":"Select Mac"},
-                    "click_event":{"action":"run_command","command":"/trigger carbon37menu.mace set 1"}
+                    "hover_event":{"action":"show_text","value":"Select Mace"},
+                    "click_event":{"action":"run_command","command":"/trigger carbon37menu.mace"}
                 },
             ]
         ],
@@ -80,13 +80,15 @@ item replace entity @s hotbar.0 with minecraft:written_book[written_book_content
                 {
                     "text":"Cart",
                     "color":"blue",
-                    "hover_event":{"action":"show_text","value":"Select Cart"}
+                    "hover_event":{"action":"show_text","value":"Select Cart"},
+                    "click_event":{"action":"run_command","command":"/trigger carbon37menu.cart"}
                 },
                 "\n",
                 {
                     "text":"Spear Mace",
                     "color":"blue",
-                    "hover_event":{"action":"show_text","value":"Select Spear Mace"}
+                    "hover_event":{"action":"show_text","value":"Select Spear Mace"},
+                    "click_event":{"action":"run_command","command":"/trigger carbon37menu.spear_mace"}
                 }
             ]
         ],

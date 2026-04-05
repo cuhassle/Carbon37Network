@@ -1,2 +1,4 @@
-function carbon37menu:kit/clear
+execute as @s run function carbon37menu:kit/clear
 tag @s add smp
+tellraw @s {"text":"Selected SMP","color":"green"}
+execute as @s at @s run playsound minecraft:entity.player.levelup ambient @s
