@@ -1,0 +1,17 @@
+item replace entity @s hotbar.8 with minecraft:written_book[
+    minecraft:written_book_content={
+        pages:[
+            [[
+                "",
+                {"text":"HELP","bold":true,"underlined":true},
+                "\nHere are a list of commands to use on this server!",
+                "\n\nSelect a kit:",
+                "\n/trigger carbon37menu.[kit, eg 'sword'] set 1",
+                "\n\nLeave Battle:",
+                "\n/trigger leave set 1"
+            ]]
+        ],
+        title:"Command Help",
+        author:"Carbon37 Network",generation:0
+    }
+]
