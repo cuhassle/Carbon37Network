@@ -1,0 +1,7 @@
+{
+    "pack": {
+        "description": "The datapack needed for the carbon37 network! Menu from https://github.com/ElGeroIngles/menu_sys",
+        "min_format": [94, 1],
+        "max_format": [94, 1]
+    }
+}
