@@ -12,7 +12,13 @@ execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=at_spawn] if items entity @s
 execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=at_spawn] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"large"}] run say l
 
 # Wait Room
-execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=in_wait_room] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"leave"}] run function carbon37menu:interactions/leave
+execute as @a[scores={carbon37menu.rc_wfoas=1}] unless entity @s[tag=!first_in,tag=!in_wait_room] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"leave"}] run function carbon37menu:interactions/leave
+execute as @a[scores={carbon37menu.rc_wfoas=1}] unless entity @s[tag=!first_in,tag=!in_wait_room] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"teams"}] run function carbon37menu:interactions/team_select
+
+execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=first_in] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"back_to_wrmenu"}] run function carbon37menu:ffa_wait_room_first
+execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=in_wait_room] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"back_to_wrmenu"}] run function carbon37menu:ffa_wait_room
+
+# Team Select
 
 scoreboard players reset @a[scores={carbon37menu.rc_wfoas=1}] carbon37menu.rc_wfoas
 
