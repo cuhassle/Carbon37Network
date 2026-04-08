@@ -1,4 +1,6 @@
-# Lobby Menu
+# Lobby
+execute positioned 22 28 186 run title @a[distance=..1, tag=!at_spawn] title {text:"Welcome!", color:yellow}
+execute positioned 22 28 186 as @a[distance=..2, tag=!at_spawn] run function carbon37menu:recieve_items
 execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=at_spawn] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"fight"}] run function carbon37menu:interactions/fight
 execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=at_spawn] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"duel"}] run function carbon37menu:interactions/duel
 execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=at_spawn] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"spectate"}] run function carbon37menu:interactions/spectate
