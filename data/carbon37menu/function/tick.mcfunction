@@ -21,17 +21,20 @@ execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=first_in] if items entity @s
 execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=in_wait_room] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"back_to_wrmenu"}] run function carbon37menu:ffa_wait_room
 
 execute as @a[scores={carbon37menu.rc_wfoas=1}] unless entity @s[tag=!first_in,tag=!in_wait_room] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"not_ready"}] run function carbon37menu:interactions/ready
-execute as @a[scores={carbon37menu.rc_wfoas=1}] unless entity @s[tag=!first_in,tag=!in_wait_room] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"ready"}] run function carbon37menu:interactions/not_ready
+execute as @a[scores={carbon37menu.rc_coas=1}] unless entity @s[tag=!first_in,tag=!in_wait_room] if items entity @s weapon.mainhand minecraft:carrot_on_a_stick[minecraft:custom_data={item:"ready"}] run function carbon37menu:interactions/not_ready
 
 # Big arena wait Room
 execute positioned 0 40 -310 unless entity @a[distance=..10, tag=first_in] as @p[distance=..10] run function carbon37menu:ffa_wait_room_first
 execute positioned 0 40 -310 as @a[distance=..10, tag=!first_in, tag=!in_wait_room] run function carbon37menu:ffa_wait_room
 
 # Small arena wait room
+execute positioned 389 -42 3 unless entity @a[distance=..10, tag=first_in] as @p[distance=..10] run function carbon37menu:ffa_wait_room_first
+execute positioned 389 -42 3 as @a[distance=..10, tag=!first_in, tag=!in_wait_room] run function carbon37menu:ffa_wait_room
 
 # Team Select
 
 scoreboard players reset @a[scores={carbon37menu.rc_wfoas=1}] carbon37menu.rc_wfoas
+scoreboard players reset @a[scores={carbon37menu.rc_coas=1}] carbon37menu.rc_coas
 
 # Kit Select
 scoreboard players enable @a carbon37menu.sword
@@ -81,3 +84,5 @@ scoreboard players set @a leave 0
 
 # No Dropping items
 execute at @a[tag=at_spawn] as @e[type=minecraft:item,distance=..10] run data merge entity @s {PickupDelay:0}
+execute at @a[tag=first_in] as @e[type=minecraft:item,distance=..10] run data merge entity @s {PickupDelay:0}
+execute at @a[tag=in_wait_room] as @e[type=minecraft:item,distance=..10] run data merge entity @s {PickupDelay:0}

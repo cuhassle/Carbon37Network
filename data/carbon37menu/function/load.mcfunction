@@ -1,4 +1,5 @@
 scoreboard objectives add carbon37menu.rc_wfoas minecraft.used:minecraft.warped_fungus_on_a_stick
+scoreboard objectives add carbon37menu.rc_coas minecraft.used:minecraft.carrot_on_a_stick
 
 scoreboard objectives add carbon37menu.sword trigger
 scoreboard objectives add carbon37menu.axe trigger
