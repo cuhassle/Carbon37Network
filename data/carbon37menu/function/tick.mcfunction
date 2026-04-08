@@ -7,9 +7,9 @@ execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=at_spawn] if items entity @s
 execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=at_spawn] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"back_to_main"}] run function carbon37menu:recieve_items
 
 # FFA Select
-execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=at_spawn] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"small"}] run say s
+execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=at_spawn] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"small"}] run tp @s 389 -42 3
 execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=at_spawn] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"medium"}] run say m
-execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=at_spawn] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"large"}] run say l
+execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=at_spawn] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"large"}] run tp @s 0 38 -310
 
 # Wait Room
 execute as @a[scores={carbon37menu.rc_wfoas=1}] unless entity @s[tag=!first_in,tag=!in_wait_room] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"leave"}] run function carbon37menu:interactions/leave
@@ -17,6 +17,15 @@ execute as @a[scores={carbon37menu.rc_wfoas=1}] unless entity @s[tag=!first_in,t
 
 execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=first_in] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"back_to_wrmenu"}] run function carbon37menu:ffa_wait_room_first
 execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=in_wait_room] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"back_to_wrmenu"}] run function carbon37menu:ffa_wait_room
+
+execute as @a[scores={carbon37menu.rc_wfoas=1}] unless entity @s[tag=!first_in,tag=!in_wait_room] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"not_ready"}] run function carbon37menu:interactions/ready
+execute as @a[scores={carbon37menu.rc_wfoas=1}] unless entity @s[tag=!first_in,tag=!in_wait_room] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"ready"}] run function carbon37menu:interactions/not_ready
+
+# Big arena wait Room
+execute positioned 0 40 -310 unless entity @a[distance=..10, tag=first_in] as @p[distance=..10] run function carbon37menu:ffa_wait_room_first
+execute positioned 0 40 -310 as @a[distance=..10, tag=!first_in, tag=!in_wait_room] run function carbon37menu:ffa_wait_room
+
+# Small arena wait room
 
 # Team Select
 
