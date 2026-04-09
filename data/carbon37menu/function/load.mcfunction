@@ -15,4 +15,9 @@ scoreboard objectives add leave trigger
 
 scoreboard players reset @a carbon37menu.rc_wfoas
 
+team add blue
+team add red
+team add yellow
+team add green
+
 tellraw @a {"text":"Datapack reloaded succesfully!","color":"green"}

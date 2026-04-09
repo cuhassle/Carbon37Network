@@ -4,6 +4,9 @@ execute positioned 22 28 186 as @a[distance=..2, tag=!at_spawn] run function car
 execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=at_spawn] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"fight"}] run function carbon37menu:interactions/fight
 execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=at_spawn] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"duel"}] run function carbon37menu:interactions/duel
 execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=at_spawn] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"spectate"}] run function carbon37menu:interactions/spectate
+execute as @a[tag=at_spawn] run effect give @s speed 1 2 true
+execute as @a[tag=at_spawn] run effect give @s saturation 1 255 true
+gamemode adventure @a[tag=at_spawn]
 
 # Back Button
 execute as @a[scores={carbon37menu.rc_wfoas=1}, tag=at_spawn] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"back_to_main"}] run function carbon37menu:recieve_items
@@ -32,6 +35,11 @@ execute positioned 389 -42 3 unless entity @a[distance=..10, tag=first_in] as @p
 execute positioned 389 -42 3 as @a[distance=..10, tag=!first_in, tag=!in_wait_room] run function carbon37menu:ffa_wait_room
 
 # Team Select
+execute as @a[scores={carbon37menu.rc_wfoas=1}] unless entity @s[tag=!first_in,tag=!in_wait_room] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"blue"}] run function carbon37menu:team/blue
+execute as @a[scores={carbon37menu.rc_wfoas=1}] unless entity @s[tag=!first_in,tag=!in_wait_room] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"red"}] run function carbon37menu:team/red
+execute as @a[scores={carbon37menu.rc_wfoas=1}] unless entity @s[tag=!first_in,tag=!in_wait_room] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"green"}] run function carbon37menu:team/green
+execute as @a[scores={carbon37menu.rc_wfoas=1}] unless entity @s[tag=!first_in,tag=!in_wait_room] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"yellow"}] run function carbon37menu:team/yellow
+execute as @a[scores={carbon37menu.rc_wfoas=1}] unless entity @s[tag=!first_in,tag=!in_wait_room] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data={item:"clear_team"}] run function carbon37menu:team/clear_team
 
 scoreboard players reset @a[scores={carbon37menu.rc_wfoas=1}] carbon37menu.rc_wfoas
 scoreboard players reset @a[scores={carbon37menu.rc_coas=1}] carbon37menu.rc_coas
